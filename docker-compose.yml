@@ -1,0 +1,12 @@
+version: "3.10"
+
+services:
+  app:
+    image: smtp_server
+    build:
+      context: .
+    ports:
+      - "10001:25"
+    volumes:
+      - .:/mailing_service
+    tty: true
